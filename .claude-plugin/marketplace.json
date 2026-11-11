@@ -1,0 +1,14 @@
+{
+  "name": "betterpowers",
+  "owner": {
+    "name": "kyokusakin"
+  },
+  "plugins": [
+    {
+      "name": "betterpowers",
+      "source": "./",
+      "description": "Outcome-driven engineering rules for Claude Code."
+    }
+  ],
+  "description": "Betterpowers: outcome-driven engineering rules for Claude Code."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "betterpowers",
+  "version": "0.1.0",
+  "description": "Outcome-driven engineering rules: risk-scaled rigor, evidence before claims, minimal code, entry-boundary validation, behavior tests, domain-only comments, terse talk.",
+  "license": "MIT",
+  "author": {
+    "name": "kyokusakin"
+  }
+}
