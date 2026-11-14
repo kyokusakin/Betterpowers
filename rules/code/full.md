@@ -1,2 +1,2 @@
 ## Code level: full
-Enforce the ladder. Shortest correct diff, shortest explanation.
+Enforce the ladder on every new function, abstraction, dependency, and option. Shortest explanation.

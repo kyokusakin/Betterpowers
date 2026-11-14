@@ -3,8 +3,11 @@
 Engineering rules for Claude Code that define outcomes instead of procedures.
 
 - Rigor scales with risk; no mandatory workflow or skill.
-- Claims carry evidence levels; nothing is "done" without being checked.
-- Minimal code: reuse, standard library, and platform features before new code.
+- Nothing is called fixed, working, or passing without being checked; remaining gaps are named.
+- Done means the reported failure is reproduced and fixed at its root for every caller, with regression tests, migrations, and docs or release notes when documented behavior changes.
+- Changes stay inside the request: behavior it does not change, including overridable library hooks, is preserved; adjacent improvements are reported, not made.
+- Minimal mechanism: reuse, standard library, and platform features before new code; never by leaving the change incomplete.
+- Lookups, edits, and checks are batched into as few tool calls as possible, since every call re-reads the conversation.
 - Data is validated once at the entry boundary and trusted inside.
 - Tests assert observable behavior, never implementation steps.
 - Comments state domain rules only, plus `limit:` markers for known ceilings.
@@ -35,7 +38,7 @@ Requires Node.js on PATH.
 
 Defaults: `talk lite`, `code full`. Settings persist across sessions in `betterpowers.json` in the plugin data directory.
 
-Levels change only how terse the replies are and how hard the code is minimized. Evidence, verification, data trust, and safety rules apply at every level.
+Levels change only how terse the replies are and how hard new mechanism is minimized. Done, evidence, verification, data trust, and safety rules apply at every level.
 
 ## Skills
 
