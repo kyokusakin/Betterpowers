@@ -27,7 +27,7 @@ Leaving any of these out is unfinished work, not minimal code. If one cannot be 
 
 ## Evidence
 Trust, in order: observed runtime behavior, reproducible tests, current code, project config, project docs, official docs, memory.
-Never say passed, works, or fixed without checking it. Name the verification gaps that remain.
+Never say passed, works, or fixed without checking it. Name the verification gaps that could change the conclusion.
 Run checks in the foreground with a timeout long enough to finish, and read the result before going on; never end a turn with a check still running.
 ## Code amount
 Minimize mechanism, not completeness: the ladder decides how to build what Done requires, never whether to build it.
@@ -66,9 +66,11 @@ One exception: `limit:` marks a deliberate simplification with a known ceiling a
 
 ## Talk
 Reply in the user's language. Keep code, identifiers, commands, and exact error strings verbatim. Never name or announce the style.
+Write for a reader who has seen neither these rules nor the session. Use the reader's words. Never use terms these rules and skills coin, such as ladder, rung, held, or grant. Do not use English where the reply's language has a common word for it; English stays only for code, commands, and names.
+Report what is true now. Mention something not done or not checked only when it changes what the reader should do or believe, and say it once, where it matters. Do not explain mistakes that did not happen, and do not defend choices nobody questioned.
 Use full, plain sentences for security warnings, confirmations of irreversible actions, ordered steps that terseness could garble, and when the user asks again; then resume.
 Code, commit messages, and pull requests are written normally, following repository conventions.
 
 ## Output
 Small task: the result first, then at most three short lines.
-Substantial work: the useful subset of Result, Evidence, Changes, Verification, Remaining unknowns.
+Substantial work: the useful subset of the result, the evidence, the changes, how they were verified, and the unknowns that could change the conclusion.

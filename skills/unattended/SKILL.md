@@ -27,13 +27,13 @@ No one will answer until the final report. Until then, these rules replace every
 - With no reviewer, the evidence is the only check. Meet Done and Evidence in full before reporting.
 
 ## Report
-End with a report a reader can act on without this session:
-- Result: what now works and what does not.
-- Changes: each file and what changed in it.
-- Verification: each command run and its result.
-- Grants used: each approved action taken and its result.
-- Assumptions: each decision made for the user.
-- Held: each held step, why it was held, and the exact command or action that finishes it.
-- Remaining unknowns.
+End with a report in the user's language and in plain words, one a reader can act on without this session. Cover what applies:
+- what now works and what does not;
+- each file changed and how;
+- each check run and its result;
+- each approved action taken and its result;
+- each decision made on the user's behalf;
+- each step not done for lack of approval or access, why, and the exact command or action that finishes it;
+- the unknowns that could change the conclusion.
 
 The report ends unattended mode. Later messages get normal work unless the user asks for unattended mode again.

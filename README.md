@@ -3,7 +3,7 @@
 Engineering rules for Claude Code that define outcomes instead of procedures.
 
 - Rigor scales with risk; no mandatory workflow or skill.
-- Nothing is called fixed, working, or passing without being checked; remaining gaps are named.
+- Nothing is called fixed, working, or passing without being checked; gaps that could change the conclusion are named.
 - Done means the reported failure is reproduced and fixed at its root for every caller, with regression tests, migrations, and docs or release notes when documented behavior changes.
 - Changes stay inside the request: behavior it does not change, including overridable library hooks, is preserved; adjacent improvements are reported, not made.
 - Minimal mechanism: reuse, standard library, and platform features before new code; never by leaving the change incomplete.
@@ -12,7 +12,7 @@ Engineering rules for Claude Code that define outcomes instead of procedures.
 - Tests assert observable behavior, never implementation steps.
 - Comments state domain rules only, plus `limit:` markers for known ceilings.
 - Clean code without ceremony: domain names, no surprising side effects.
-- Terse replies in the user's language.
+- Terse, plain replies in the user's language, without the rules' own jargon or defensive caveats.
 
 ## Install
 
