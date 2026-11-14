@@ -45,6 +45,16 @@ Levels change only how terse the replies are and how hard new mechanism is minim
 - `/betterpowers:plan` for large, ambiguous, or high-risk work.
 - `/betterpowers:debug` for root-cause analysis.
 - `/betterpowers:review` for reviewing a diff, branch, or pull request.
+- `/betterpowers:subagents` to build a multi-task plan by handing each task to a fresh subagent and accepting it only after review.
+- `/betterpowers:unattended` for headless, scheduled, or overnight runs with no one to answer. It decides conservatively and acts only on what you approved in advance. It holds everything else instead of asking, and it ends with a report of the grants it used, its assumptions, and the steps it held.
+
+`subagents` runs only when you invoke it. Unattended mode lasts until its final report. You can also start it by asking in plain words ("run this unattended, I'm heading out"). Claude then points you to `/betterpowers:unattended` before asking for approvals. The skill tells Claude never to enter it on its own.
+
+When you start unattended mode in a conversation, Claude first checks the accounts and services the run will use, such as sign-ins, tokens, and OAuth or app permissions. It tells you what to sign in to or grant before you leave. It then asks you once to approve the actions that need it, such as pushes, deletions, and installs, and lists the tool permissions that would stop at a prompt. Ordinary edits and test runs need no approval. What you approve is all it may do; anything else is held. A headless run has no one to ask, so put the approvals in the prompt:
+
+```bash
+claude -p "/betterpowers:unattended fix the failing tests in tests/billing. Approved: commit to a new branch fix/billing."
+```
 
 ## Tests
 
@@ -67,5 +77,5 @@ rules/talk/*.md      reply terseness levels
 rules/code/*.md      code minimization levels
 references/          worked examples, read on demand
 hooks/               injects rules at session and subagent start, handles /betterpowers
-skills/              plan, debug, review, settings
+skills/              plan, debug, review, subagents, unattended, settings
 ```
