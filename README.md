@@ -5,6 +5,8 @@ Engineering rules for Claude Code that define outcomes instead of procedures.
 - Rigor scales with risk; no mandatory workflow or skill.
 - Nothing is called fixed, working, or passing without being checked; gaps that could change the conclusion are named.
 - Done means the reported failure is reproduced and fixed at its root for every caller, with regression tests, migrations, and docs or release notes when documented behavior changes.
+- Questions come only after reading the project, and only about what would change what gets built: one at a time, with every filled-in default stated.
+- Feedback is checked against the code before it is acted on, with no performative agreement.
 - Changes stay inside the request: behavior it does not change, including overridable library hooks, is preserved; adjacent improvements are reported, not made.
 - Minimal mechanism: reuse, standard library, and platform features before new code; never by leaving the change incomplete.
 - Lookups, edits, and checks are batched into as few tool calls as possible, since every call re-reads the conversation.
@@ -42,6 +44,7 @@ Levels change only how terse the replies are and how hard new mechanism is minim
 
 ## Skills
 
+- `/betterpowers:brainstorming` to settle with you what to build, and why, before planning something new.
 - `/betterpowers:plan` for large, ambiguous, or high-risk work.
 - `/betterpowers:debug` for root-cause analysis.
 - `/betterpowers:review` for reviewing a diff, branch, or pull request.
@@ -77,5 +80,5 @@ rules/talk/*.md      reply terseness levels
 rules/code/*.md      code minimization levels
 references/          worked examples, read on demand
 hooks/               injects rules at session and subagent start, handles /betterpowers
-skills/              plan, debug, review, subagents, unattended, settings
+skills/              brainstorming, plan, debug, review, subagents, unattended, settings
 ```
